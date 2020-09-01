@@ -9,6 +9,9 @@ namespace Expert_SRP
             Double pesos = ConvertirAPesos(dinero, moneda);
             return pesos >= a.PrecioDulce + a.PrecioMasa;
         }
+
+        //Debería estar en su propia clase, encargada de convertir el dinero.
+        //Una clase propia de persona o similar que almacenara el dinero que tuviera una persona podría ser util.
         private Double ConvertirAPesos(Double dinero, String moneda)
         {
             if (moneda.Equals("U$S")) 
