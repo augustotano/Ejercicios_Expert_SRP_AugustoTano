@@ -8,6 +8,8 @@ namespace SRP
         public string Titulo { get ; }
         public string Autor { get ; }
         public string Codigo { get ;  }
+
+        //No cumple SRP. Tendrían que estar en su propia clase biblioteca.
         public string SectorBiblioteca { get ; set; }
         public string EstanteBiblioteca { get ; set; }
 
@@ -18,6 +20,7 @@ namespace SRP
             this.Codigo = codigo;
         }
 
+        //Debería estar tambien en su propia clase llamada biblioteca.
         public void AlmacenarLibro(String sector, String estante)
         {
             this.SectorBiblioteca = sector;
