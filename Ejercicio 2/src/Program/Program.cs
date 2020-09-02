@@ -12,8 +12,8 @@ namespace SRP
             Libro libro2 = new Libro("Pro C#","Troelsen","001-035");
 
             //No dependerian de libro, sino de biblioteca.
-            biblioteca1.AlmacenarLibro("A","7");
-            biblioteca1.AlmacenarLibro("B","3");
+            biblioteca1.AlmacenarLibro(libro1,"A","7");
+            biblioteca1.AlmacenarLibro(libro2,"B","3");
 
         }
     }
