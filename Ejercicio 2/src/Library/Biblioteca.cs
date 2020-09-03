@@ -5,11 +5,14 @@ namespace SRP
 {
     public class Biblioteca
     {
-        ArrayList ListaLibros = new ArrayList();
+        private ArrayList ListaLibros = new ArrayList();
 
         public void AlmacenarLibro(Libro libro, String sector, String estante)
         {
-            ListaLibros.Add((libro, sector, estante));
+            libro.Sector = sector;
+            libro.Estante = estante;
+            ListaLibros.Add(libro);
+        
         }
 
     }
