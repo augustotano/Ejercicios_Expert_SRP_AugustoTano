@@ -1,52 +1,22 @@
 ﻿using System;
 using System.Text;
 
+
 namespace Library
 {
-    public class AppointmentService
+    public class Appointment
     {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+        private Socio socio {get; set;}
+        private Doctor doctor {get;set;} 
+        private Clinica clinica {get;set;}
+        public string CreateAppointment(Socio socio1, Doctor doctor1, Clinica clinica1)
         {
-            StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
-            Boolean isValid = true;
+            this.socio = socio1;
+            this.doctor = doctor1;
+            this.clinica = clinica1;
 
-            if (string.IsNullOrEmpty(name))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Name is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(id))
-            {
-                stringBuilder.Append("Unable to schedule appointment, id is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(phoneNumber))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Phone number is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(appoinmentPlace))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Appoinment place is required\n");
-                isValid = false;
-            }
-
+            return $"Cita creada para el socio {socio1.nombre} con el doctor {doctor1.nombre} en la clinica {clinica.nombre}";
             
-            if (string.IsNullOrEmpty(doctorName))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Doctor name is required\n");
-                isValid = false;
-            }
-
-            if (isValid)
-            {
-                stringBuilder.Append("Appoinment Scheduled");
-            }
-
-            return stringBuilder.ToString();
         }
 
     }
