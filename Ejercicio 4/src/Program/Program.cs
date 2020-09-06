@@ -12,8 +12,8 @@ namespace PII_Game_Of_Life
             Cell celula = new Cell();
 
             gameBoard.ObtenerBoard();
-            printer.ImprimirTablero();
             celula.EjecutarTodo();
+            printer.ImprimirTablero();
             Console.WriteLine("Hello World!");
         }
     }
