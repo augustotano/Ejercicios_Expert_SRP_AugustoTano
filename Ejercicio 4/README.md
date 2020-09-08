@@ -45,7 +45,7 @@ Se asume:
 * El objeto ```gameBoard``` contiene un tablero ya cargado con todos los valores asignados.
 
 ```csharp
-bool[,] gameBoard = /* contenido del tablero */;
+bool[,] gameBoard = tablero.Board;
 int boardWidth = gameBoard.GetLength(0);
 int boardHeight = gameBoard.GetLength(1);
 
