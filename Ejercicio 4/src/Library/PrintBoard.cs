@@ -1,12 +1,14 @@
 using System;
+using System.Text;
+using System.Threading;
 
 namespace PII_Game_Of_Life
 {
     public class PrintBoard
     {
-        bool[,] b ; //variable que representa el tablero
-        int width; //variabe que representa el ancho del tablero
-        int height; //variabe que representa altura del tablero
+        public bool[,] b {get; set;}  //variable que representa el tablero
+        public int width {get; set;} //variabe que representa el ancho del tablero
+        public int height {get; set;} //variabe que representa altura del tablero
 
         public void ImprimirTablero()
         {

@@ -6,11 +6,11 @@ namespace PII_Game_Of_Life
     // Maneja la logica del juego
     public class Cell
     {
-        bool[,] gameBoard; /* contenido del tablero*/
-        int boardWidth = gameBoard.GetLength(0);
-        int boardHeight = gameBoard.GetLength(1);
+        public static bool[,] gameBoard; /* contenido del tablero*/
+        public static int boardWidth = gameBoard.GetLength(0);
+        public static int boardHeight = gameBoard.GetLength(1);
 
-        bool[,] cloneboard = new bool[boardWidth, boardHeight];
+        static bool[,] cloneboard = new bool[boardWidth, boardHeight];
         
         public void EjecutarTodo()
         {
